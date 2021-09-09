@@ -40,8 +40,31 @@
         <li><a href = "mailto: fedor-basmanov@mail.ru">Email</a> a.k.a. slower and more old-fashioned way to contact me.</li>
     </ul>
     </section>
-    <section id="section-left"><h4>About Me</h4></section>
-    <section id="section-right"><h4>Fandoms</h4></section>
+    <section id="section-left"><h4>About Me</h4>
+    <p>Hi! My name is Teddy and you're on my personal website (sounds like something from the nineties? It sure does). 
+        I'm a junior year student from Saint-Petersburg majoring in Internet Technologies and Programming.
+        Here you can find all the links and information about me. As you can probably tell I like wiring and used to write reviews but currently I'm more interested in (fan)fiction and essays.
+        I watch a lot of different movies, series and cartoons and especially love sci-fi and fantasy. A few years ago I got into musical theatre and have been absolutely enamoured by it ever since (my favourite musical/rock opera is "Jesus Christ Superstar" and specifically the 2000 movie).
+        I'm trying to read a lot even if I not always manage - I read mostly non-fiction about biology and/or history but I also like fantasy and historical novels.
+        I like history in all its shapes and forms (to the point that everybody in high school used to tell me that I should be a historian :)) and the period I'm most interested in is XVI century Russia.
+        I also like learning languages, even if I'm not especially successful in learning a lot of them.
+        My taste in music is chaotic to say the least but I like a lot of Russian rock and soundtracks to above mentioned musical theatre pieces.
+
+
+    </p>
+    </section>
+    <section id="section-right"><h4>Fandoms</h4>
+        <ul>
+            <li><b>The Elder Scrolls</b> (and specifically Oblivion and Morrowing) - videogames that feel like home.</li>
+            <li><b>Star Trek</b> - have watched almost all of it until HBO started releasing three new series every year.</li>
+            <li><b>Avatar: The Last Airbander, Adventure Time, Steven Universe, Gravity Falls, Star VS The Forces of Evil, Over the Garden Wall</b> - some cartoons (and their comics extensions) I love but never engaged with the fandom much.</li>
+            <li><b>Bubble Comics</b> - stuck on the first phase but I'm working on it.</li>
+            <li><b>The Witcher</b> - books and the series.</li>
+            <li><b>Musical Theatre</b> - I like too many musicals and operas to list them all here.</li>
+            <li><b>Redacted and Hollow</b> - current hyperfixations (audio storytelling).</li>
+        </ul>
+    
+    </section>
     <section id="section-left"><h4>Education</h4>
     The ones that count are:
     <ul>
@@ -49,11 +72,71 @@
         <li><a href="https://en.itmo.ru/en/page/42/Facts_&_Figures.htm">ITMO University</a> where I'm currently studying.</li>
     </ul>
     </section>
-    <section id="section-left"><h4>Languages</h4></section>
-    <section id="section-right"><h4>Programming Languages</h4></section>
-    <section id="section-left"><h4>Code Example</h4></section>
-    <section id="section-left"><h4>Links to writing I'm low key proud of</h4></section>
-    <section id="section-left"><h4>Probably currently playing in my head</h4></section>
+    <section id="section-right"><h4>Languages</h4>
+    <ul>
+        <li><b>Russian</b> - native speaker;</li>
+        <li><b>English</b> - C2 (supposedly, not officially evaluated);</li>
+        <li><b>German</b> - B1 (barely).</li>
+    </ul>
+    </section>
+    <section id="section-left"><h4>Programming Languages</h4>
+    <ul>
+        <li><b>Java</b> (my programming mother tongue, if you will);</li>
+        <li><b>C/C++</b> (which I hate);</li>
+        <li><b>C#</b> (just a bit);</li>
+        <li><b>Python</b> (will soon get more of that on Machine Learning);</li>
+        <li><b>Bash</b> (will soon get more of that on Linux Administrating and I'm dreading it).</li>
+    </ul>
+    </section>
+    <section id="section-left"><h4>Code Example</h4>
+    <p>So that you know that I'm not lying about knowing any programming languages, here's a transaction class from a Banking System task from OOP class.
+    <pre><code>
+public abstract class Transaction {
+    static ArrayList<Transaction> transactions = new ArrayList<Transaction>();
+    protected static int ID = 1;
+    int id;
+    double summ;
+    boolean isCanceled = false;
+        
+    abstract void undo() throws Exceptions.AlreadyCanceled;
+        
+    static void undo(int id) 
+    throws Exceptions.IncorrectIDTransaction, 
+    Exceptions.AlreadyCanceled {
+        for (int i = 0; i < transactions.size(); i++) {
+            if (transactions.get(i).id == id) {
+                transactions.get(i).undo();
+                return;
+            }
+        }
+        throw new Exceptions.IncorrectIDTransaction();
+    }
+        
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (!(o instanceof Transaction)) {
+            return false;
+        }
+        Transaction c = (Transaction) o;
+        return id == c.id;
+    }
+        
+}
+    </code></pre></p>
+    </section>
+    <section id="section-left"><h4>Links to writing I'm low key proud of</h4>
+    <ul>
+        <li><a href="https://archiveofourown.org/works/31167809/chapters/77024123#workskin">Revenge Party</a></li>
+        <li><a href="https://archiveofourown.org/works/31772704">Being Alive</a></li>
+        <li><a href="https://archiveofourown.org/works/32775757">Somebody to Love</a></li>
+    </ul>
+    </section>
+    <section id="section-left"><h4>Probably currently playing in my head</h4>
+        <iframe src="https://open.spotify.com/embed/playlist/7uCLF3bXLll0TwTTgN2mSL" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </section>
     <section id="section-left"><h4>Quote from "Prisoners of Power" by Strugatsky brothers, because I can and no one will ever 
         scroll that far anyway</h4>
     <blockquote>What an appalling state of affairs when you find yourself being tortured not by an enemy 
@@ -68,5 +151,15 @@
     </section>
 </body>
 <footer id = "footer">
+    <section><h5>Have a doggo, if you actually read all of these!</h5>
+    <pre>
+         /^ ^\
+        / 0 0 \
+        V\ Y /V
+         / - \
+        /    |
+       V__) ||
+    </pre>
+    </section>
 </footer>
 </html>
