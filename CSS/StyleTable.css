@@ -1,0 +1,30 @@
+#section-left {
+    overflow:hidden;
+ }
+ #section-right {
+     width:220px;
+     margin-left:30px;
+     float:right;
+     }
+     section {
+         border:1px solid #999;
+         }
+         #footer{
+             float: left;
+         }
+         #aside {
+             width: 30%;
+             float: right;
+             font-style: italic;
+         }
+         .service-list {
+            list-style-type: none;
+            margin-left:0px;
+            padding-left:0px;
+            display: inline-block;
+            }
+            
+            .service-list img
+            {
+            float:left;
+            }
