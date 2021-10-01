@@ -101,3 +101,7 @@ header{
               font-family: 'Sansita Swashed', cursive;
               font-size: 20px;
             }
+            .img-withBorder{
+              border:2px outset #4fba9a;
+              margin: 5px;
+            }
