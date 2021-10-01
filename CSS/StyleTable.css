@@ -1,18 +1,49 @@
-#section-left {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+body{
+  background: linear-gradient(to left top, #9E4024, #EB8365) fixed;
+}
+div.container{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+header{
+    color:#2E6B5A;
+    background-color: #AEEEDC;
+    font-family: papyrus, fantasy;
+    width: 100%;
+    width: 95vw;
+    border:2px double #4fba9a;
+    padding: 5px;
+    line-height: 2.5;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+.section-left {
     overflow:hidden;
  }
- #section-right {
+ .section-right {
      width:220px;
      margin-left:30px;
      float:right;
      }
      section {
-         border:1px solid #999;
+        background-color: #AEEEDC;
+        color:#2E6B5A;
+         border:1px solid #4fba9a;
+         margin: 5px;
+         padding: 5px;
+         font-family: Georgia, serif;
+         line-height: normal;
          }
-         #footer{
+        footer{
              float: left;
+             border:2px double #4fba9a;
          }
-         #aside {
+         aside {
              width: 30%;
              float: right;
              font-style: italic;
@@ -27,4 +58,46 @@
             .service-list img
             {
             float:left;
+            }
+            a:link {
+                color: #52c0a1;
+                background-color: transparent;
+                text-decoration: none;
+              }
+              a:visited {
+                color: #4fba9a;
+                background-color: transparent;
+                text-decoration: none;
+              }
+              a:hover {
+                color: #9E4024 ;
+                background-color: transparent;
+                text-decoration: underline;
+              }
+              a:active {
+                color: #EB8365 ;
+                background-color: transparent;
+                text-decoration: underline;
+              }
+              h1, h2, h3, h4, h5, h6{
+                color: #9E4024;
+                font-family: "Cormorant", serif;
+                /*font-family: papyrus, fantasy;*/
+              }
+              h2{
+                font-size: 35px;
+                font-weight: 800;
+              }
+              h4{
+                font-size: 25px;
+              }
+              .section-left-playlist {
+                font-family: StickNoBills-VariableFont_wght;
+                background-color: #2E6B5A;
+                background-image: url('D:/School/Programming/WEB/TheodoreBasmanov.github.io/Resources/PlaylistBackgound2.jpg');
+                color: #66EBC5;
+            }
+            blockquote{
+              font-family: 'Sansita Swashed', cursive;
+              font-size: 20px;
             }
