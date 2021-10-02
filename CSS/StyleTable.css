@@ -21,6 +21,7 @@ header{
     display: flex; 
     flex-direction: column;
     align-items: center;
+    border-radius: 25px;
 }
 .section-left {
     overflow:hidden;
@@ -38,10 +39,12 @@ header{
          padding: 5px;
          font-family: Georgia, serif;
          line-height: normal;
+         border-radius: 15px;
          }
         footer{
              float: left;
              border:2px double #4fba9a;
+             border-radius: 15px;
          }
          aside {
              width: 30%;
@@ -50,14 +53,12 @@ header{
          }
          .service-list {
             list-style-type: none;
-            margin-left:0px;
-            padding-left:0px;
             display: inline-block;
             }
-            
             .service-list img
             {
             float:left;
+            padding: 5px;
             }
             a:link {
                 color: #52c0a1;
@@ -82,7 +83,6 @@ header{
               h1, h2, h3, h4, h5, h6{
                 color: #9E4024;
                 font-family: "Cormorant", serif;
-                /*font-family: papyrus, fantasy;*/
               }
               h2{
                 font-size: 35px;
@@ -94,6 +94,8 @@ header{
               .section-left-playlist {
                 font-family: StickNoBills-VariableFont_wght;
                 background-color: #2E6B5A;
+                background-position: left top;
+                background-repeat: repeat;
                 /*background-image: url('D:/School/Programming/WEB/TheodoreBasmanov.github.io/Resources/PlaylistBackgound2.jpg');*/
                 color: #66EBC5;
             }
@@ -103,5 +105,7 @@ header{
             }
             .img-withBorder{
               border:2px outset #4fba9a;
-              margin: 5px;
+              box-shadow: #4fba9a 0px 22px 70px 4px;
+              margin: 10px;
+              border-radius: 10px;
             }
