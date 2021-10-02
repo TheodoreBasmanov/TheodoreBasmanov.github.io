@@ -1,11 +1,19 @@
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 30cm) {
   .img-withBorder {
     display: none;
   }
-}
-@media screen and (max-width: 300px){
   section{
-    font-size: large;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    scrollbar-color:  #EB8365 #AEEEDC;
+    scrollbar-width: thin;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
