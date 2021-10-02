@@ -26,10 +26,20 @@ header{
 .section-left {
     overflow:hidden;
  }
- .section-right {
+ .section-right{
      width:220px;
+     max-height: 100vh;
      margin-left:30px;
      float:right;
+     }
+     .section-right-scrollable{
+      width:220px;
+      max-height: 100vh;
+      margin-left:30px;
+      float:right;
+      overflow-y: scroll;
+      scrollbar-color:  #EB8365 #AEEEDC;
+      scrollbar-width: thin;
      }
      section {
         background-color: #AEEEDC;
@@ -90,6 +100,7 @@ header{
               }
               h4{
                 font-size: 25px;
+                position:static;
               }
               .section-left-playlist {
                 font-family: StickNoBills-VariableFont_wght;
