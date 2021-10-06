@@ -29,7 +29,7 @@ div.container{
   flex-direction: column;
   align-items: center;
 }
-header{
+#header{
     color:#2E6B5A;
     background-color: #AEEEDC;
     font-family: papyrus, fantasy;
@@ -46,20 +46,20 @@ header{
 .section-left {
     overflow:auto;
  }
+ .section-right-scrollable{
+  width:220px;
+  max-height: 100vh;
+  margin-left:30px;
+  float:right;
+  overflow-y: scroll;
+  scrollbar-color:  #EB8365 #AEEEDC;
+  scrollbar-width: thin;
+ }
  .section-right{
      width:220px;
      max-height: 100vh;
      margin-left:30px;
      float:right;
-     }
-     .section-right-scrollable{
-      width:220px;
-      max-height: 100vh;
-      margin-left:30px;
-      float:right;
-      overflow-y: scroll;
-      scrollbar-color:  #EB8365 #AEEEDC;
-      scrollbar-width: thin;
      }
      section {
         background-color: #AEEEDC;
@@ -127,7 +127,7 @@ header{
                 background-color: #2E6B5A;
                 background-position: left top;
                 background-repeat: repeat;
-                /*background-image: url('D:/School/Programming/WEB/TheodoreBasmanov.github.io/Resources/PlaylistBackgound2.jpg');*/
+                background-image: url('.../Resources/PlaylistBackgound2.jpg');
                 color: #66EBC5;
             }
             blockquote{
@@ -137,6 +137,7 @@ header{
               color:black;
               border: 2px solid #9E4024;
               padding: 5px;
+              border-radius: 10px;
             }
             .img-withBorder{
               border:2px outset #4fba9a;
