@@ -17,6 +17,11 @@
     align-items:center;
     flex-wrap: wrap;
   }
+  table{
+    overflow-x: scroll;
+    scrollbar-color:  #EB8365 #AEEEDC;
+    scrollbar-width: thin;
+  }
 }
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
