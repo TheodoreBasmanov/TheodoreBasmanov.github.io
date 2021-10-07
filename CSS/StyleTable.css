@@ -46,20 +46,16 @@ div.container{
 .section-left {
     overflow:auto;
  }
- .section-right-scrollable{
-  width:220px;
-  max-height: 100vh;
-  margin-left:30px;
-  float:right;
-  overflow-y: scroll;
-  scrollbar-color:  #EB8365 #AEEEDC;
-  scrollbar-width: thin;
- }
  .section-right{
      width:220px;
      max-height: 100vh;
      margin-left:30px;
      float:right;
+     }
+     .section-right-scrollable{
+      overflow-y: scroll;
+      scrollbar-color:  #EB8365 #AEEEDC;
+      scrollbar-width: thin;
      }
      section {
         background-color: #AEEEDC;
@@ -144,4 +140,40 @@ div.container{
               box-shadow: #4fba9a 0px 22px 70px 4px;
               margin: 10px;
               border-radius: 10px;
+            }
+            table{
+              display: inline-grid;
+              grid-template-columns: repeat(5, 1fr);
+              grid-template-rows: repeat(7, 1fr);
+              grid-auto-flow: row;
+              background: #2E6B5A;
+              color: #66EBC5;
+              border:1px solid #4fba9a;
+              border-radius: 10px;
+              font-family: "Cormorant", serif;
+            }
+          
+            thead,tbody, tr {
+              display: contents;
+            }
+            caption{
+              font-size: 25px;
+              font-family: "Cormorant", serif;
+              grid-column-start: 1;
+              grid-column-end: end;
+              grid-row: 1;
+            }
+            tr, td, th{
+              border: 2px solid wheat;
+              border-radius: 2px;
+              color:#2E6B5A;
+            }
+            th{
+              background: #EB8365;
+            }
+            table tr:nth-child(even) td{
+              background: #AEEEDC
+            }
+            table tr:nth-child(odd) td{
+              background: #EB8365
             }
