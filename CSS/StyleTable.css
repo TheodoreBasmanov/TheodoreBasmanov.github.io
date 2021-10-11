@@ -18,6 +18,7 @@
     flex-wrap: wrap;
   }
   table{
+    font-size: 20px;
     overflow-x: scroll;
     scrollbar-color:  #EB8365 #AEEEDC;
     scrollbar-width: thin;
