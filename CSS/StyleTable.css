@@ -149,9 +149,7 @@ div.container{
             }
             table{
               display: inline-grid;
-              width: 100%;
               grid-template-columns: repeat(5, 1fr);
-              grid-auto-columns: 100vmin;
               grid-template-rows: repeat(7, 1fr);
               grid-auto-flow: row;
               background: #2E6B5A;
