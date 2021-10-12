@@ -148,7 +148,9 @@ div.container{
               border-radius: 10px;
             }
             table{
+              box-sizing: border-box;
               display: inline-grid;
+              width: 100%;
               grid-template-columns: repeat(5, 1fr);
               grid-template-rows: repeat(7, 1fr);
               grid-auto-flow: row;
