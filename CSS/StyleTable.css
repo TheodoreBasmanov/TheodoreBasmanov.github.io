@@ -92,22 +92,22 @@ div.container{
             float:left;
             padding: 5px;
             }
-            a:link {
+            .a:link {
                 color: #52c0a1;
                 background-color: transparent;
                 text-decoration: none;
               }
-              a:visited {
+              .a:visited {
                 color: #4fba9a;
                 background-color: transparent;
                 text-decoration: none;
               }
-              a:hover {
+              .a:hover {
                 color: #9E4024 ;
                 background-color: transparent;
                 text-decoration: underline;
               }
-              a:active {
+              .a:active {
                 color: #EB8365 ;
                 background-color: transparent;
                 text-decoration: underline;
@@ -185,3 +185,26 @@ div.container{
             table tr:nth-child(odd) td{
               background: #EB8365
             }
+
+            .header-nav{
+              margin:20px auto;
+              display: flex;
+            }
+          .header-nav-elements{
+              background-color: #9E4024;
+              margin: 0px 10px;
+              text-decoration: none;
+              color: #AEEEDC;
+              border: 2px solid #9E4024;
+              border-radius: 5px;
+          }
+        .header-nav-elements-current{
+            box-shadow: #EB8365 0px 5px 5px 5px;
+        }
+          .header-nav-elements:hover{
+              background-color:#52c0a1;
+          }
+          .header-nav-elements:active{
+            color: #EB8365;
+        }
+          
