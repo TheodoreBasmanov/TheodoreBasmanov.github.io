@@ -35,6 +35,58 @@ div.container{
   flex-direction: column;
   align-items: center;
 }
+div.Form{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #AEEEDC;
+  color:#2E6B5A;
+  width: 100%;
+  width: 95vw;
+  border:2px double #4fba9a;
+  padding: 5px;
+  line-height: 2.5;
+}
+form{
+  display: flex; 
+}
+label{
+  color: #9E4024;
+  font-family: "Cormorant", serif;
+  font-size: 25px;
+}
+input[type=text] {
+  background-color: white;
+  padding-left: 40px;
+  box-shadow: inset 1px 1px 3px #4fba9a;
+  border-radius: 5px;
+}
+div.form_item {
+  background-color: #66EBC5;
+  color: #9E4024;
+  word-wrap: anywhere;
+  height: auto;
+  margin: 5px;
+  padding: 5px 5px 5px 0;
+  border: solid #4fba9a 2px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+.img-removeButton{
+  background-color: #9E4024;
+  border: solid #4fba9a 2px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 2px;
+}
 #header{
     color:#2E6B5A;
     background-color: #AEEEDC;
@@ -207,4 +259,5 @@ div.container{
           .header-nav-elements:active{
             color: #EB8365;
         }
+
           

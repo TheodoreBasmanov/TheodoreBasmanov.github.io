@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "keywords" content = "personal site, from, theodorebasmanov">
+        <meta name = "description" content = "Form with addeable elements.">
+        <link rel = "stylesheet" href ="CSS/StyleTable.css">
+        <title>Bauman Anastasya M33011. Form</title>
+        <script src="JS/Timing.js"></script>
+        <script src="JS/Script.js"></script>
+        <script src="JS/FormScript.js"></script>
+    </head>
+    <body>
+        <div class=container>
+            <img class="img-withBorder" src="Resources/YesItsTheImpresialCity.jfif" width="560" height="350"/>
+        <header id="header">
+            <center><h2>Theodore Basmanov</h2></center>
+            <center><h3><blockquote>
+                <i>And so what, if I love each sparkle and each bangle <br>
+                Why not try to see things from a different angle</i>
+            </blockquote></h3></center>
+            <center><h4>20 y/o, he/him</h4></center>
+            <nav calss = "header-nav">
+                <a href="index.html"  class="header-nav-elements">Main Page</a>
+                <a href="Table.html"  class="header-nav-elements">Useless Little Table</a>
+                <a href="Form.html"  class="header-nav-elements header-nav-elements-current">Not Less Useless Little Form</a>            
+            </nav>
+        </header>
+        </div>
+        <main>
+            <center><div class = "Form" id = "FormContainer">
+                <form id="form" onsubmit="onFormSubmit()">
+                    <label for "smth">Say something nice:</label><br>
+                    <input type="text" id="smth" name="smth" onblur="getFormValue()" placeholder="Yeah, right here." maxlength="100"><br>
+                </form>
+            </div></center>
+        </main>
+        <footer class = "footer">
+            <section><h5>Have a doggo, if you actually read all of these!</h5>
+            <pre>
+                 /^ ^\
+                / 0 0 \
+                V\ Y /V
+                 / - \
+                /    |
+               V__) ||
+            </pre>
+            <p id = "timing">Page load</p>
+            </section>
+        </footer>
+    </body>
