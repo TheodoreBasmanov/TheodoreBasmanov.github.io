@@ -1,22 +1,51 @@
 
-(() => {
-    $(window).on("load", () => {
-        document.getElementById("form").on("submit", onFormSubmit);
-        //loadSavedItems();
-    });
-})();
-function createNewItem(text) {
+function getAppStorage() {
+    var appStorage = localStorage.getItem('FormContainer');
+    if (appStorage == null) {
+        localStorage.setItem('FormContainer', JSON.stringify({}));
+    }
+    appStorage = JSON.parse(localStorage.getItem('FormContainer'));
+    return appStorage;
+}
+
+function addToAppStorage(id, data) {
+    var s = getAppStorage();
+    s[id] = data;
+    localStorage.setItem('FormContainer', JSON.stringify(s));
+    //window.alert(localStorage.getItem('FormContainer'));
+}
+
+function removeFromAppStorage(id) {
+    var s = getAppStorage();
+    delete s[id];
+    localStorage.setItem('FormContainer', JSON.stringify(s));
+}
+
+function cleanAllLocalStorage() {
+    localStorage.removeItem('FormContainer');
+}
+
+function loadSavedItems() {
+    let savedItems = JSON.parse(localStorage.getItem('FormContainer'));
+    if (savedItems) {
+        savedItems.items.forEach((item) => {
+            processItem(item, false);
+        });
+    }
+}
+function createNewItem(text, id) {
     var v = document.createElement('div');
     v.classList.add('form_item');
-    var id = document.getElementById("FormContainer").children.length;
     v.setAttribute("itemId", id)
     v.innerText = text;
     v.innerHTML += "<img class=\"img-removeButton\" src=\"Resources/RemoveButton.png\" width=\"30\" height=\"30\"/>";
     v.querySelector('.img-removeButton').onclick = function(event) {
         var h = document.querySelector('[itemId="' + id + '"]');
         h.parentElement.removeChild(h);
-        //removeFromAppStorage(id);
+        removeFromAppStorage(id);
     };
+    //window.alert(v);
+    //window.alert(document.getElementById("FormContainer"));
     document.getElementById("FormContainer").append(v);
 }
 function getFormValue() {
@@ -29,7 +58,7 @@ function getFormValue() {
     return input;
 }
 function cleanFormValue() {
-    document.getElementById("smth").val('').trigger('blur');
+    document.getElementById("smth").value = '';
 }
 function onFormSubmit() {
     event.preventDefault();
@@ -43,13 +72,25 @@ function onFormSubmit() {
 
     return false;
 }
-function processItem(text, save=true) {
+function processItem(text) {
     //window.alert("Submitted");
     if (text.length > 0) {
-        //if (save) {
-        //    saveToLocalStorage(text);
-        //}
-        createNewItem(text);
+        var id = document.getElementById("FormContainer").lastElementChild.getAttribute("itemId");
+        if(id == null){
+            id = 0;
+        }
+        id++;
+        addToAppStorage(id, text);
+        createNewItem(text, id);
         cleanFormValue();
     }
 }
+const list = document.querySelector("FormContainer");
+document.addEventListener("DOMContentLoaded", function() {
+    var appStorage = getAppStorage();
+    for (var i in appStorage) {
+        //window.alert(i);
+        //window.alert(appStorage[i])
+        createNewItem(appStorage[i], i);
+    }
+});
