@@ -2,13 +2,14 @@
 <html>
     <head>
         <meta charset = "UTF-8">
-        <meta name = "keywords" content = "personal site, form, theodorebasmanov">
-        <meta name = "description" content = "Form with addeable elements.">
+        <meta name = "keywords" content = "personal site, promise, theodorebasmanov">
+        <meta name = "description" content = "Loadable to do list.">
         <link rel = "stylesheet" href ="CSS/StyleTable.css">
         <title>Bauman Anastasya M33011. Form</title>
         <script src="JS/Timing.js"></script>
         <script src="JS/Script.js"></script>
         <script src="JS/FormScript.js"></script>
+        <script src="JS/Promise.js"></script>
     </head>
     <body>
         <div class=container>
@@ -23,17 +24,34 @@
             <nav calss = "header-nav">
                 <a href="index.html"  class="header-nav-elements">Main Page</a>
                 <a href="Table.html"  class="header-nav-elements">Useless Little Table</a>
-                <a href="Form.html"  class="header-nav-elements header-nav-elements-current">Not Less Useless Little Form</a>
-                <a href="Promise.html"  class="header-nav-elements">Loadable list</a>       
+                <a href="Form.html"  class="header-nav-elements">Not Less Useless Little Form</a>
+                <a href="Promise.html"  class="header-nav-elements header-nav-elements-current">Loadable list</a>
             </nav>
         </header>
         </div>
         <main>
             <center><div class = "Form" id = "FormContainer">
-                <form id="form" onsubmit="onFormSubmit()">
-                    <label for "smth">Say something nice:</label><br>
-                    <input type="text" id="smth" name="smth" onblur="getFormValue()" placeholder="Yeah, right here." maxlength="100"><br>
+                <form id="search" onsubmit="loadById();return false;">
+                    <label for "smth">To Do List:</label><br>
+                    <input type="text" id="smth" name="smth" onblur="getFormValue()" placeholder="Search by user id" maxlength="3"><br>
+                    <input type="button" value="load all" onclick="loadAll();"/>
                 </form>
+                <div class="preloader hide">
+                    <img src="Resources/Loading.gif">
+                </div>
+                <table class="main-todo-table hide">
+                    <tbody class="tbody" id="tbody-lab6">
+                        <tr class="tr">
+                        <td class="td">User ID</td>
+                        <td class="td">Task ID</td>
+                        <td class="td">Title</td>
+                        <td class="td">Completed</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="warning block hide">
+                    <p>⚠ Something went wrong!</p>
+                </div>
             </div></center>
         </main>
         <footer class = "footer">

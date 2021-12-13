@@ -87,6 +87,14 @@ div.form_item {
   margin: 5px;
   padding: 2px;
 }
+.hide{
+  display: none;
+}
+.warning{
+  font-size: 14pt;
+  font-weight:bold;
+  color: red;
+}
 #header{
     color:#2E6B5A;
     background-color: #AEEEDC;
@@ -225,7 +233,7 @@ div.form_item {
             }
             tr, td, th{
               border: 2px solid wheat;
-              border-radius: 2px;
+              border-radius: 3px;
               color:#2E6B5A;
             }
             th{
@@ -259,5 +267,10 @@ div.form_item {
           .header-nav-elements:active{
             color: #EB8365;
         }
-
+.main-todo-table{
+  margin: auto;
+  padding: auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+        
           

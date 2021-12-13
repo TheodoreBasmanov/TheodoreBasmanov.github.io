@@ -12,7 +12,6 @@ function addToAppStorage(id, data) {
     var s = getAppStorage();
     s[id] = data;
     localStorage.setItem('FormContainer', JSON.stringify(s));
-    //window.alert(localStorage.getItem('FormContainer'));
 }
 
 function removeFromAppStorage(id) {
@@ -44,17 +43,11 @@ function createNewItem(text, id) {
         h.parentElement.removeChild(h);
         removeFromAppStorage(id);
     };
-    //window.alert(v);
-    //window.alert(document.getElementById("FormContainer"));
     document.getElementById("FormContainer").append(v);
 }
 function getFormValue() {
-    //window.alert("Submitted");
-    //window.alert(document.getElementById("smth").value());
-    //return document.getElementById("smth").value();
     var inputs = document.getElementById("form").elements;
     var input = inputs[0].value;
-    //window.alert(input)
     return input;
 }
 function cleanFormValue() {
@@ -64,7 +57,6 @@ function onFormSubmit() {
     event.preventDefault();
     try {
         let form_value = getFormValue();
-        //window.alert(form_value);
         processItem(form_value);
     } catch (e) {
         console.error(e);
@@ -73,7 +65,6 @@ function onFormSubmit() {
     return false;
 }
 function processItem(text) {
-    //window.alert("Submitted");
     if (text.length > 0) {
         var id = document.getElementById("FormContainer").lastElementChild.getAttribute("itemId");
         if(id == null){
@@ -89,8 +80,6 @@ const list = document.querySelector("FormContainer");
 document.addEventListener("DOMContentLoaded", function() {
     var appStorage = getAppStorage();
     for (var i in appStorage) {
-        //window.alert(i);
-        //window.alert(appStorage[i])
         createNewItem(appStorage[i], i);
     }
 });
