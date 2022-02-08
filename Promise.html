@@ -33,7 +33,7 @@
             <center><div class = "Form" id = "FormContainer">
                 <form id="search" onsubmit="loadById();return false;">
                     <label for "smth">To Do List:</label><br>
-                    <input type="text" id="smth" name="smth" onblur="getFormValue()" placeholder="Search by user id" maxlength="3"><br>
+                    <input type="text" id="smth" name="smth" onblur="getFormValue()" placeholder="Search by user id" minlength="1" maxlength="3"><br>
                     <input type="button" value="load all" onclick="loadAll();"/>
                 </form>
                 <div class="preloader hide">
